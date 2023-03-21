@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* printlphabet_x10 - prints the alphabet
+* print_alphabet_x10 - prints the alphabet
 *
 * Return: Always 0 (Success)
 */
 
-void printlphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	int i;
 	int r;
