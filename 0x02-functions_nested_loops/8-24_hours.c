@@ -7,14 +7,14 @@
 */
 void jack_bauer(void)
 {
-	int min1, min2, hr1, hr2
-	int maxhr2 = 9
+	int min1, min2, hr1, hr2;
+	int maxhr2 = 9;
 
 	for (hr1 = 0; hr1 <= 2; hr1++)
 	{
 		if hr1 == 2
 		{
-			maxhr2 = 3
+			maxhr2 = 3;
 		}
 		for (hr2 = 0; hr2 <= maxhr2; hr2++)
 		{
