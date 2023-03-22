@@ -24,13 +24,22 @@ void times_table(void)
 				m2 = m % 10;
 				_putchar(m1 + '0');
 				_putchar(m2 + '0');
+				if (n2 < 9)
+				{	
+					_putchar(44);
+					_putchar(32);
+				}
 			}
 			else
 			{
 				_putchar(m + '0');
+				if (n2 < 9)
+				{
+					_putchar(44);
+					_putchar(44);
+					_putchar(32);
+				}
 			}
-			_putchar(44);
-			_putchar(32);
 		}
 		_putchar('\n');
 
