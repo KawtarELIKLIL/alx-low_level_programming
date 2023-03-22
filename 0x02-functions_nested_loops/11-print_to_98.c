@@ -39,7 +39,7 @@ void print_to_98(int n)
 	}
 	else
 	{
-		printf("%D", 98);
+		printf("%d", 98);
 	}
 	printf("\n");
 }
