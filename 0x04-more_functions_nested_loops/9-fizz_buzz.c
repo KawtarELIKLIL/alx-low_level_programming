@@ -1,42 +1,35 @@
-#include"main.h"
+#include<stdio.h>
 
 /**
-* main - prints numbers to 100
-*
-* Return: always 0
-*/
+  * main - prints numbers to 100
+  *
+  * Return: always 0
+  */
 
 int main(void)
 {
 	int n;
+	int i = 1;
 
-	_putchar(49);
+	printf("%d", i);
 	for (n = 2; n <= 100; n++)
 	{
-		_putchar(32);
-		if ((n % 3) == 0)
-		{
-			_putchar(70);
-			_putchar(105);
-			_putchar(122);
-			_putchar(122);
-		}
+		printf(" ");
+		if (((n % 3) == 0) && ((n % 5) == 0))
+			printf("FizzBuzz");
+		else if ((n % 3) == 0)
+			printf("Fizz");
 		else if ((n % 5) == 0)
-		{	
-			_putchar(66);
-			_putchar(117);
-			_putchar(122);
-			_putchar(122);
-		}
+			printf("Buzz");
 		else
 		{
 			if (n > 9)
 			{
-				_putchar((n / 10) + '0');
+				printf("%d", n / 10);
 			}
-			_putchar((n % 10) + '0');
+			printf("%d", n % 10);
 		}
 	}
-	_putchar('\n');
+	printf("\n");
 	return (0);
 }
