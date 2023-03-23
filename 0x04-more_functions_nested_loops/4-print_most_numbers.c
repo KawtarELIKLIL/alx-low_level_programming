@@ -14,7 +14,7 @@ void print_most_numbers(void)
 	{
 		if (i == 50 || i == 52)
 		{
-			continue
+			continue;
 		}
 		else
 		{
