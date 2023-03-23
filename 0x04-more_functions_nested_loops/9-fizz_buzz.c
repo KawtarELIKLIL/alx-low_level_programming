@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include"main.h"
 
 /**
 * main - prints numbers to 100
@@ -9,25 +9,34 @@
 int main(void)
 {
 	int n;
-	int i = 1;
 
-	printf("%d", i);
+	_putchar(49);
 	for (n = 2; n <= 100; n++)
 	{
-		printf(" ");
+		_putchar(32);
 		if ((n % 3) == 0)
-			printf("Fizz");
+		{
+			_putchar(70);
+			_putchar(105);
+			_putchar(122);
+			_putchar(122);
+		}
 		else if ((n % 5) == 0)
-			printf("Buzz");
+		{	
+			_putchar(66);
+			_putchar(117);
+			_putchar(122);
+			_putchar(122);
+		}
 		else
 		{
 			if (n > 9)
 			{
-				printf("%d", n / 10);
+				_putchar((n / 10) + '0');
 			}
-			printf("%d", n % 10);
+			_putchar((n % 10) + '0');
 		}
 	}
-	printf("\n");
+	_putchar('\n');
 	return (0);
 }
