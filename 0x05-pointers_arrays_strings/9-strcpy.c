@@ -3,6 +3,7 @@
   *_strcpy - copies the string from a pointer
   *@dest: input destination
   *@src: input char
+  *Return: copy of the sring from pointer
   */
 char *_strcpy(char *dest, char *src)
 {
@@ -13,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		j++;
 	}
-	for (n = 0; n < j; n++)
+	for (n = 0; n <= j; n++)
 	{
 		dest[n] = src[n];
 	}
