@@ -9,8 +9,6 @@ int size_str(char *s)
 {
 	int len = 0;
 
-	if (s == NULL)
-		return (0);
 	while (s[len] != '\0')
 	{
 		len++;
@@ -27,23 +25,21 @@ int size_str(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *newp;
-	int i, j = 0;
+	int i, j;
 
+	if (s1 == NULL)
+		s1 = '\0';
+	if (s2 == NULL)
+		s2 = '\0';
 	newp = malloc(size_str(s1) + size_str(s2) + 1);
 	if (newp == NULL)
 		return (NULL);
-	if (s1 != NULL)
+	for (i = 0; i < size_str(s1); i++)
+		newp[i] = s1[i];
+	for (j = 0; j < size_str(s2); j++)
 	{
-		for (i = 0; i < size_str(s1); i++)
-			newp[i] = s1[i];
-	}
-	if (s2 != NULL)
-	{
-		for (j = 0; j < size_str(s2); j++)
-		{
-			newp[i] = s2[j];
-			i++;
-		}
+		newp[i] = s2[j];
+		i++;
 	}
 	newp[i] = '\0';
 	return (newp);
