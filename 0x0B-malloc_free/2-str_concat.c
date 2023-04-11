@@ -27,6 +27,10 @@ char *str_concat(char *s1, char *s2)
 	char *newp;
 	int i, j;
 
+	if (s1 == NULL)
+		s1 = '\0';
+	if (s2 == NULL)
+		s2 = '\0';
 	newp = malloc(size_str(s1) + size_str(s2) + 1);
 	if (newp == NULL)
 		return (NULL);
