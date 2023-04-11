@@ -13,7 +13,7 @@ int size_str(char *s)
 	{
 		len++;
 	}
-	return (len);
+	return (len + 1);
 }
 
 /**
@@ -31,6 +31,5 @@ char *_strdup(char *str)
 		return (NULL);
 	for (i = 0; i < size_str(str); i++)
 		newp[i] = str[i];
-	free(str);
 	return (newp);
 }
