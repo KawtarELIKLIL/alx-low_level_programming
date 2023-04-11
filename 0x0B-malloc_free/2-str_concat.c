@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	char *newp;
 	int i, j;
 
-	newp = malloc(size_str(s1) + size_str(s2));
+	newp = malloc(size_str(s1) + size_str(s2) + 1);
 	if (newp == NULL)
 		return (NULL);
 	for (i = 0; i < size_str(s1); i++)
@@ -37,5 +37,6 @@ char *str_concat(char *s1, char *s2)
 		newp[i] = s2[j];
 		i++;
 	}
+	newp[i] = '\0';
 	return (newp);
 }
