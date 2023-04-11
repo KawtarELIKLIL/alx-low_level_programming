@@ -13,17 +13,25 @@ int main(int argc, char *argv[])
 	int change = 0;
 	int coin[] = {25, 10, 5, 2, 1};
 
-	money = atoi(argv[1]);
 	if (argc == 2)
 	{
-		for (n = 0; n < 5; n++)
+		money = atoi(argv[1]);
+		if (money < 0)
 		{
-			change += money / coin[n];
-			money = money % coin[n];
-			if (money == 0)
+			printf("%c\n", '0');
+			return (0);
+		}
+		else
+		{
+			for (n = 0; n < 5; n++)
 			{
-				printf("%d\n", change);
-				return (0);
+				change += money / coin[n];
+				money = money % coin[n];
+				if (money == 0)
+				{
+					printf("%d\n", change);
+					return (0);
+				}
 			}
 		}
 	}
