@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
 *_calloc - allocates memory for an array
-*@nmeb: input int
+*@nmemb: input int
 *@size: size of array
 *Return: a pointer
 */
@@ -15,5 +15,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	newp = malloc(size * nmemb);
 	if (newp == NULL)
 		return (NULL);
+	free(newp);
 	return (newp);
 }
