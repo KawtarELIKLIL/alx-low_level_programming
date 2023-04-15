@@ -9,12 +9,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *newp;
+	unsigned int n;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	newp = malloc(size * nmemb);
 	if (newp == NULL)
 		return (NULL);
-	free(newp);
+	for (n = 0; n < (size * nmemb); n++)
+		newp[n] = 0;
 	return (newp);
 }
