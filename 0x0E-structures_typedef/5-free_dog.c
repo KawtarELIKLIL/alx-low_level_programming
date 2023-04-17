@@ -4,7 +4,7 @@
 *free_dog - fonction that frees dog
 *@d: pointer to my dog
 */
-void free_dog(dog_t *d);
+void free_dog(dog_t *d)
 {
 	if (d != 0)
 	{
