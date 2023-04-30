@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 /**
-*free_listint2 -  frees a list
+*free_listint -  frees a list
 *@head: pointer
 */
-void free_listint2(listint_t *head)
+void free_listint(listint_t *head)
 {
 	listint_t *temp;
 
@@ -15,5 +15,4 @@ void free_listint2(listint_t *head)
 	free(head);
 	head = temp;
 	}
-	*head = NULL;
 }
