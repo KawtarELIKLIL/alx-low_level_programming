@@ -6,13 +6,11 @@
 *@head: double pointer
 *Return: pointer
 */
-stint_t *reverse_listint(listint_t **head);
+listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *nxt = NULL;
 	listint_t *prev = NULL;
 
-	if (*head == NULL)
-		return;
 	while (*head)
 	{
 		nxt = (*head)->next;
@@ -20,6 +18,6 @@ stint_t *reverse_listint(listint_t **head);
 		prev = *head;
 		*head = nxt;
 	}
-	*head = prev
+	*head = prev;
 	return (*head);
 }
