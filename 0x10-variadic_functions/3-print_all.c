@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	char *spt = "";
-	const char *x;
+	char *x;
 	va_list str;
 
 	if (format == NULL)
