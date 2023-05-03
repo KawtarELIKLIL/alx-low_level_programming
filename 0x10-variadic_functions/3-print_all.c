@@ -10,6 +10,7 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0;
+	char *spt = "";
 	const char *x;
 	va_list str;
 
@@ -18,11 +19,30 @@ void print_all(const char * const format, ...)
 	va_start(str, format);
 	while (format[i])
 	{
-		x = va_arg(str, char *);
-		printf("%s, ", x);
+		switch (format[i])
+		{
+			case 'c':
+				printf("%s%c", spt, va_arg(str, int));
+				break;
+			case 'i':
+				printf("%s%d", spt, va_arg(str, int));
+				break;
+			case 'f':
+				printf("%s%f", spt, va_arg(str, double));
+				break;
+			case 's':
+				x = va_arg(str, char *);
+				if (!x)
+					x = "(nil)";
+				printf("%s%s", spt, x);
+				break;
+			default:
+				i++;
+				continue;
+		}
+		spt = ", ";
 		i++;
 	}
-	x = va_arg(str, char *);
-	printf("%s\n", x);
+	printf("\n");
 	va_end(str);
 }
