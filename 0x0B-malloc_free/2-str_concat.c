@@ -10,7 +10,9 @@ int size_str(char *s)
 	int len = 0;
 
 	if (s == NULL)
+	{
 		return (0);
+	}
 	while (s[len] != '\0')
 	{
 		len++;
@@ -37,8 +39,6 @@ char *str_concat(char *s1, char *s2)
 		for (i = 0; i < size_str(s1); i++)
 			newp[i] = s1[i];
 	}
-	else
-		s1 = '\0';
 	if (s2 != NULL)
 	{
 		for (j = 0; j < size_str(s2); j++)
@@ -47,8 +47,6 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 	}
-	else
-		s2 = '\0';
 	newp[i] = '\0';
 	return (newp);
 }
