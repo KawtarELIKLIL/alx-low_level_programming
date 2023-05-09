@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 			exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	buff = malloc(sizeof(char) * 1024);
 	if (buff == NULL)
 	{
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		rd = read(file_from, buff, 1024);
-		file_to = open(argv[1], O_WRONLY | O_APPEND);
+		file_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	while (rd > 0);
 	free(buff);
